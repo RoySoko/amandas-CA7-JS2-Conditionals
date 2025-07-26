@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Amanda Sokolowski">
+  <title>Bear Ninja Hunter</title>
+</head>
+<body>
+  <p id="result"></p>
+
+  <script type="text/javascript">
+    // Ask for player’s name
+    let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
+
+    // Greet the player
+    alert(`Hi ${playerName}! Let's Play!!`);
+
+    // Ask for player's choice
+    let playerChoice = prompt('Who are you Bear, Ninja, or Hunter');
+
+    // computer choice
+    const computerChoice = 'Bear';
+
+    // Start building result message
+    let resultMessage = `${playerName}, you picked ${playerChoice}! The computer picked ${computerChoice}!\n`;
+
+    // Determine winner 
+    let outcome = ''; // store win/loss/tie
+
+    if (playerChoice === computerChoice) {
+      outcome = "It's a tie!";
+    } else if (playerChoice === 'Bear') {
+      if (computerChoice === 'Ninja') {
+        outcome = 'You win!';
+      } else if (computerChoice === 'Hunter') {
+        outcome = 'You lose!';
+      }
+    } else if (playerChoice === 'Ninja') {
+      if (computerChoice === 'Hunter') {
+        outcome = 'You win!';
+      } else if (computerChoice === 'Bear') {
+        outcome = 'You lose!';
+      }
+    } else if (playerChoice === 'Hunter') {
+      if (computerChoice === 'Bear') {
+        outcome = 'You win!';
+      } else if (computerChoice === 'Ninja') {
+        outcome = 'You lose!';
+      }
+    } 
+    // switch
+switch (computerChoice) {
+  case 'Bear':
+    console.log('The computer chose Bear — strong and fearless!');
+    break;
+}
+
+    // Final combined message
+    resultMessage += outcome;
+
+    
+    console.log(resultMessage);
+
+    // Display result on page
+    document.getElementById('result').innerHTML = resultMessage;
+  </script>
+</body>
+</html>
