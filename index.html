@@ -22,30 +22,30 @@
     const computerChoice = 'Bear';
 
     // Start building result message
-    let resultMessage = `${playerName}, you picked ${playerChoice}! The computer picked ${computerChoice}!\n`;
+    let resultMessage = `${playerName} you chose ${playerChoice}! The computer chose ${computerChoice}!\n`;
 
     // Determine winner 
     let outcome = ''; // store win/loss/tie
 
     if (playerChoice === computerChoice) {
-      outcome = "It's a tie!";
+      outcome = "It's a tie!!";
     } else if (playerChoice === 'Bear') {
       if (computerChoice === 'Ninja') {
-        outcome = 'You win!';
+        outcome = 'You win!!';
       } else if (computerChoice === 'Hunter') {
-        outcome = 'You lose!';
+        outcome = 'You lose!!';
       }
     } else if (playerChoice === 'Ninja') {
       if (computerChoice === 'Hunter') {
-        outcome = 'You win!';
+        outcome = 'You win!!';
       } else if (computerChoice === 'Bear') {
-        outcome = 'You lose!';
+        outcome = 'You lose!!';
       }
     } else if (playerChoice === 'Hunter') {
       if (computerChoice === 'Bear') {
-        outcome = 'You win!';
+        outcome = 'You win!!';
       } else if (computerChoice === 'Ninja') {
-        outcome = 'You lose!';
+        outcome = 'You lose!!';
       }
     } 
     // switch
